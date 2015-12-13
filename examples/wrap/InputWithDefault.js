@@ -3,7 +3,7 @@ import Formsy from 'formsy-react';
 
 const validationMessages = require('./validationMessages.js');
 
-const ACInput = React.createClass({
+const InputWithDefault = React.createClass({
   mixins: [Formsy.Mixin],
 
   changeValue(event) {
@@ -40,4 +40,4 @@ const ACInput = React.createClass({
   }
 });
 
-export default ACInput;
+export default InputWithDefault;

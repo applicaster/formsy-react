@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Form } from 'formsy-react';
 
-import ACInput from './ACInput';
+import MyInput from './InputWithDefault';
 
 const App = React.createClass({
   getInitialState() {
@@ -20,8 +20,8 @@ const App = React.createClass({
   render() {
     return (
       <Form onSubmit={this.submit} onValid={this.enableButton} onInvalid={this.disableButton} className="login">
-        <ACInput name="email" title="Email" validations="isEmail" validationError="OVERRIDE: This is not a valid email" required />
-        <ACInput name="password" title="Password" type="password" required />
+        <MyInput name="email" title="Email" validations="isEmail" validationError="OVERRIDE: This is not a valid email" required />
+        <MyInput name="email" title="Another Email" validations="isEmail" required />
         <button type="submit" disabled={!this.state.canSubmit}>Submit</button>
       </Form>
     );
